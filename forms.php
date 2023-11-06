@@ -8,11 +8,11 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $telefone = $_POST["telefone"];
+    $nome = $_POST["Nome"];
+    $email = $_POST["Email"];
+    $telefone = $_POST["Telefone"];
     $cidade = $_POST["cidade"];
-    $mensagem = $_POST["mensagem"];
+    $mensagem = $_POST["Mensagem"];
 
     // Você pode fazer o que quiser com os dados aqui, como enviá-los por e-mail, salvar no banco de dados, etc.
 
