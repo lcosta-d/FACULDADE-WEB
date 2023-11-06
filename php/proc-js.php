@@ -1,5 +1,4 @@
 <?php
-// Verifique as credenciais no banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "estacio@estacio";

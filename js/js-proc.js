@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value;
         const senha = document.getElementById("senha").value;
 
-        // Enviar as credenciais para o PHP
+        
         fetch("php/proc-js.php", {
             method: "POST",
             headers: {
@@ -18,11 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.text())
             .then(data => {
                 if (data === "login_sucesso") {
-                    // Redirecionar para a página de boas-vindas
                     window.location.href = "index.html";
                 } else {
-                    // Exibir mensagem de erro
-                    alert("Login falhou. Verifique suas credenciais.");
+                    alert("Falha. Verifique os dados inseridos.");
                 }
             })
             .catch(error => {

@@ -10,7 +10,6 @@ if ($conn->connect_error) {
     die("Conexão com o banco de dados falhou: " . $conn->connect_error);
 }
 
-// Coletar dados do formulário
 $nome = $_POST["nome"];
 $sobrenome = $_POST["sobrenome"];
 $idade = $_POST["idade"];
