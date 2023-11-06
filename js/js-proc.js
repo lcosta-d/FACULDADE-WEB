@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("login-form");
+    const formLogin = document.getElementById("formLogin");
 
-    loginForm.addEventListener("submit", function (event) {
+    formLogin.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const email = document.getElementById("email").value;

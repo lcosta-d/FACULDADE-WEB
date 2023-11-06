@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LOGIN HEALER</title>
-        <link rel="shortcut icon" href="images/loja.ico">
-        <link rel="stylesheet" href="">
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/loja.ico">
+    <link rel="stylesheet" href="css/login.css">
+</head>
 <body>
-    <div class="login-container">
-        <h1>LOGIN</h1>
-        <form id="login-form"> 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <button type="submit">Entrar</button>
+    <div class="page">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo da sua empresa">
+        </div>
+        <form method="POST" class="formLogin" >
+            <h1>Login</h1>
+            <p>Digite seus dados abaixo.</p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autofocus="true" required>
+            <label for="password">Senha</label>
+            <input type="password" id="senha"  name="senha" placeholder="Digite sua senha" required>
+
+
+
+            <a href="/">Esqueci minha senha</a>
+            
+            
+            
+            <a href="registro.html">Ainda não tem conta? Clique aqui!</a>
+            <input type="submit" value="Acessar" class="btn" />
         </form>
-            <p>Não possui uma conta? <a href="registro.html">Criar conta</a></p> 
-    </div>
     </div>
     <script src="js/js-proc.js"></script>
 </body>
