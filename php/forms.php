@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agradecemos seu contato</title>
-    <link rel="shortcut icon" href="images/loja.ico">
-    <link rel="stylesheet" href="css/agradecimento.css">
+    <link rel="shortcut icon" href="/faculdade/images/loja.ico">
+    <link rel="stylesheet" href="/faculdade/css/agradecimento.css">
 </head>
 <body>
-    <img src="images/logo.png" alt="logo" style="vertical-align: middle;">
+    <img src="/faculdade/images/logo.png" alt="logo" style="vertical-align: middle;">
 </body>
 </html>
 
