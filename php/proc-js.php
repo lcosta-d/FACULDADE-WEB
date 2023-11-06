@@ -1,4 +1,5 @@
 <?php
+// Verifique as credenciais no banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "estacio@estacio";
@@ -10,19 +11,23 @@ if ($conn->connect_error) {
     die("Conexão com o banco de dados falhou: " . $conn->connect_error);
 }
 
-// Coletar dados do formulário
-$nome = $_POST["nome"];
-$sobrenome = $_POST["sobrenome"];
-$idade = $_POST["idade"];
 $email = $_POST["email"];
-$senha = password_hash($_POST["senha"], PASSWORD_BCRYPT);
+$senha = $_POST["senha"];
 
-$sql = "INSERT INTO usuarios (nome, sobrenome, idade, email, senha) VALUES ('$nome', '$sobrenome', '$idade', '$email', '$senha')";
+$sql = "SELECT email, senha FROM USUARIOS WHERE email = '$email'";
+$result = $conn->query($sql);
 
-if ($conn->query($sql) === TRUE) {
-    echo "Conta criada com sucesso.";
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $hashedSenha = $row["senha"];
+
+    if (password_verify($senha, $hashedSenha)) {
+        echo "login_sucesso";
+    } else {
+        echo "login_falhou";
+    }
 } else {
-    echo "Erro ao criar a conta: " . $conn->error;
+    echo "login_falhou";
 }
 
 $conn->close();
