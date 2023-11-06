@@ -112,6 +112,24 @@ section{
     padding-bottom: .5rem;
 }
 
+.header .login div{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:#fff;
+}
+
+.header .login a{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:#fff;
+}
+
+.header .login a:hover{
+    color:#010103;
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
 .header .icons div{
     color:#fff;
     cursor: pointer;
