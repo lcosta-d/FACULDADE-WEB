@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #023047
+    color: #023047;
 }
 
 .page {
@@ -17,19 +17,25 @@ body {
     height: 100vh;
     background-color: #87CEFA;
 }
+.logo {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+  }
+  
+ 
+.logo img {
+    max-width: 100px;
+  }
 
 .formLogin {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
-}
-
-.areaLogin img {
-    width: 420px;
+    gap: 1px;
 }
 
 .formLogin h1 {
@@ -37,24 +43,25 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
-    font-weight: 500;
-    font-size: 2.9em;
+    font-weight: 700;
+    font-size: 1.8em;
 }
 
 .formLogin p {
     display: flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
     color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .formLogin input {
     padding: 15px;
+    width: 250px;
     font-size: 14px;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 2px;
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
@@ -62,7 +69,7 @@ body {
 
 
 .formLogin input:focus {
-    border: 1px solid #f72585;
+    border: 1px solid #d3ad7f;
 }
 
 .formLogin label {
@@ -78,14 +85,10 @@ body {
     transition: all linear 160ms;
 }
 
-.formLogin a:hover {
-    color: #f72585;
-}
-
 .btn {
-    background-color: #f72585;
+    background-color: #d3ad7f;
+    text-align: center;
     color: #fff;
-    font-size: 14px;
     font-weight: 600;
     border: none !important;
     transition: all linear 160ms;
@@ -96,6 +99,6 @@ body {
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #ff0676;
+    background-color: #d3ad7f;
 
 }
