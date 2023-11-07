@@ -1,26 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 0.5rem;
-    color: #023047
+    color: #023047;
 }
-
-
-body h1 {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2.5em;  
-}
-
-
-
-
 
 .page {
     display: flex;
@@ -32,63 +17,67 @@ body h1 {
     height: 100vh;
     background-color: #87CEFA;
 }
-
-.form-group {
+.logo {
     display: flex;
-    align-items: center;
+    justify-content: flex-end; /* Alinhe o logotipo à direita */
+    align-items: center; /* Centralize verticalmente o logotipo */
+  }
+  
+  /* Estilize o logotipo conforme necessário */
+  .logo img {
+    max-width: 100px; /* Defina uma largura máxima para o logotipo */
+  }
+  
+.formRegistro {
+    display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 1px;
 }
 
-.areaLogin img {
-    width: 420px;
-}
-
-
-/*formulario*/
-.form-group h1 {
+.formRegistro h1 {
     display: flex;
     justify-content: center;
     padding: 0;
     margin: 0;
-    font-weight: 500;
-    font-size: 2.9em;
+    font-weight: 700;
+    font-size: 1.8em;
 }
 
-.form-group p {
+.formRegistro p {
     display: flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
     color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.form-group input {
+.formRegistro input {
     padding: 15px;
+    width: 250px;
     font-size: 14px;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 2px;
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
 }
 
 
-.form-group input:focus {
-    border: 1px solid #f72585;
+.formRegistro input:focus {
+    border: 1px solid #d3ad7f;
 }
 
-.form-group label {
+.formRegistro label {
     font-size: 14px;
     font-weight: 600;
 }
 
-.form-group a {
+.formRegistro a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -96,18 +85,10 @@ body h1 {
     transition: all linear 160ms;
 }
 
-.form-group a:hover {
-    color: #f72585;
-}
-
-
-
-
-/*botao*/
 .btn {
-    background-color: #f72585;
+    background-color: #d3ad7f;
+    text-align: center;
     color: #fff;
-    font-size: 14px;
     font-weight: 600;
     border: none !important;
     transition: all linear 160ms;
@@ -118,16 +99,6 @@ body h1 {
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #ff0676;
+    background-color: #d3ad7f;
 
 }
-
-/*verificar depois pq o botao nao centraliza
-body .btn {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2.2em;
-} */
