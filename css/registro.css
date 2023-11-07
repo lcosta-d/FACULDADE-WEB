@@ -19,15 +19,15 @@ body {
 }
 .logo {
     display: flex;
-    justify-content: flex-end; /* Alinhe o logotipo à direita */
-    align-items: center; /* Centralize verticalmente o logotipo */
+    justify-content: flex-end; 
+    align-items: center;
   }
   
-  /* Estilize o logotipo conforme necessário */
-  .logo img {
-    max-width: 100px; /* Defina uma largura máxima para o logotipo */
+ 
+.logo img {
+    max-width: 100px;
   }
-  
+
 .formRegistro {
     display: flex;
     flex-direction: column;
