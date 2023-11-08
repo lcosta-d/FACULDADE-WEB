@@ -244,5 +244,14 @@
 
 </footer>
     <div id="boasvindas"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sucesso = urlParams.get("sucesso");
+        const nome = urlParams.get("nome");
+
+        if (sucesso === "2" && nome) {
+            document.getElementById("mensagem").innerText = "Olá, " + nome + ", você está logado.";
+        }
+    </script>
 </body>
 </html>
