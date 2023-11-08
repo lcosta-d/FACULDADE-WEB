@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $_SESSION["nome"] = $row["nome"]; // Armazene o nome do usuário na sessão
 
-    header("Location: /faculdade/index.html?sucesso=1&nome=" . $row["nome"]);
+    header("Location: /faculdade/index.html?sucesso=2&nome=" . $row["nome"]);
     exit;
 } else {
     echo "Credenciais inválidas. Por favor, tente novamente.";
