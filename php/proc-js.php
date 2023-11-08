@@ -1,4 +1,6 @@
 <?php
+session_start(); // Inicie a sessão para armazenar informações do usuário
+
 $servername = "localhost";
 $username = "root";
 $password = "estacio@estacio";
@@ -13,20 +15,19 @@ if ($conn->connect_error) {
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-$sql = "SELECT email, senha FROM USUARIOS WHERE email = '$email'";
+// Consulta para verificar as credenciais do usuário no banco de dados
+$sql = "SELECT nome, email FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    // Login bem-sucedido
     $row = $result->fetch_assoc();
-    $hashedSenha = $row["senha"];
+    $_SESSION["nome"] = $row["nome"]; // Armazene o nome do usuário na sessão
 
-    if (password_verify($senha, $hashedSenha)) {
-        echo "login_sucesso";
-    } else {
-        echo "login_falhou";
-    }
+    header("Location: /faculdade/index.html?sucesso=1&nome=" . $row["nome"]);
+    exit;
 } else {
-    echo "login_falhou";
+    echo "Credenciais inválidas. Por favor, tente novamente.";
 }
 
 $conn->close();
