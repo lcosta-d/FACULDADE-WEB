@@ -7,7 +7,7 @@ $dbname = "faculdade";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Conexão com o banco de dados falhou: " . $conn->connect_error);
+    die("Erro ao acessar o banco de dados: " . $conn->connect_error);
 }
 
 $nome = $_POST["nome"];
@@ -19,10 +19,13 @@ $senha = password_hash($_POST["senha"], PASSWORD_BCRYPT);
 $sql = "INSERT INTO usuarios (nome, sobrenome, idade, email, senha) VALUES ('$nome', '$sobrenome', '$idade', '$email', '$senha')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Conta criada com sucesso.";
+    header("Location: /faculdade/index.html?sucesso=1");
+    exit;
 } else {
-    echo "Erro ao criar a conta: " . $conn->error;
+    echo "Algo deu errado, verifique novamente! " . $conn->error;
 }
 
 $conn->close();
 ?>
+
+

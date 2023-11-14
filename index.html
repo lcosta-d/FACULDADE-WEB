@@ -83,11 +83,11 @@
                 <a href="carrinho.html" class="fas fa-shopping-cart"></a>
             </div>
             <div class="image">
-                <img src="images/fral.png" alt="">
+                <img src="images/durateston-img.png" alt="">
             </div>
             <div class="content">
-                <h3>FRALDA PAMPERS 128 UNIDADES - TAM. G</h3>
-                <div class="price">R$ 30.00</div>
+                <h3>DURATESTON DA GRINGA - O MAIS BRABO - INJETÁVEL</h3>
+                <div class="price">R$ 80.00</div>
             </div>
         </div>
 
@@ -243,14 +243,22 @@
     <div class="copyright">&copy; 2023 Farmácia HEALER | Todos os direitos reservados</div>
 
 </footer>
-    <div id="boasvindas"></div>
+<script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sucesso = urlParams.get("sucesso");
+
+        if (sucesso === "1") {
+            alert("SUA CONTA FOI CRIADA COM SUCESSO");
+        }
+    </script>
+<div id="boasvindas"></div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const sucesso = urlParams.get("sucesso");
         const nome = urlParams.get("nome");
 
         if (sucesso === "2" && nome) {
-            document.getElementById("mensagem").innerText = "Olá, " + nome + ", você está logado.";
+            document.getElementById("boasvindas").innerText = "Olá, " + nome + ", você está logado.";
         }
     </script>
 </body>

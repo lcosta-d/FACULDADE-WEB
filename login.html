@@ -10,10 +10,12 @@
 </head>
 <body>
     <div class="page">
-        <div class="logo">
-            <img src="images/logo.png" alt="Logotipo">
-          </div>
-        <form method="POST" class="formLogin" >
+        <a href="index.html">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logotipo">
+            </div>
+        </a>
+        <form action="php/proc-js.php" method="POST" class="formLogin" >
             <h1>Login</h1>
             <p>Digite seus dados abaixo.</p>
             <label for="email">E-mail</label>
@@ -28,9 +30,10 @@
             
             
             <a href="registro.html">Ainda não tem conta? Clique aqui!</a>
-            <input type="submit" value="Acessar" class="btn" />
+            <div class="button">
+             <input type="submit" value="Acessar Conta" class="btn">
+            </div>
         </form>
     </div>
-    <script src="js/js-proc.js"></script>
 </body>
 </html>

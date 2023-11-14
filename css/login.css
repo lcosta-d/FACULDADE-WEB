@@ -85,6 +85,10 @@ body {
     transition: all linear 160ms;
 }
 
+.button .btn {
+    width: 282px;
+}
+
 .btn {
     background-color: #d3ad7f;
     text-align: center;
